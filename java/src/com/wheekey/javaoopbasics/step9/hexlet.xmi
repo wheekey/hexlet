@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_eui4YCfVEem8L7GnWj5llQ" name="model">
+  <eAnnotations xmi:id="_eui4YSfVEem8L7GnWj5llQ" source="genmymodel">
+    <details xmi:id="_eui4YifVEem8L7GnWj5llQ" key="uuid" value="_q366cCfUEem8L7GnWj5llQ"/>
+    <details xmi:id="_eui4YyfVEem8L7GnWj5llQ" key="author" value="work.yermakov.kirill"/>
+  </eAnnotations>
+  <packageImport xmi:id="_eui4ZCfVEem8L7GnWj5llQ">
+    <eAnnotations xmi:id="_eui4ZSfVEem8L7GnWj5llQ" source="genmymodel">
+      <details xmi:id="_eui4ZifVEem8L7GnWj5llQ" key="uuid" value="_q366cSfUEem8L7GnWj5llQ"/>
+    </eAnnotations>
+    <importedPackage href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#/"/>
+  </packageImport>
+  <packagedElement xsi:type="uml:Class" xmi:id="_eui4ZyfVEem8L7GnWj5llQ" name="House">
+    <eAnnotations xmi:id="_eui4aCfVEem8L7GnWj5llQ" source="genmymodel">
+      <details xmi:id="_eui4aSfVEem8L7GnWj5llQ" key="uuid" value="_rKy8YAoCEDeft9glrN7A0g"/>
+    </eAnnotations>
+    <ownedAttribute xmi:id="_eui4aifVEem8L7GnWj5llQ" name="address" visibility="public">
+      <eAnnotations xmi:id="_eui4ayfVEem8L7GnWj5llQ" source="genmymodel">
+        <details xmi:id="_eui4bCfVEem8L7GnWj5llQ" key="uuid" value="_sy90EAoCEDeft9glrN7A0g"/>
+      </eAnnotations>
+      <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#//Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_eui4bSfVEem8L7GnWj5llQ" name="floorsCount" visibility="public">
+      <eAnnotations xmi:id="_eui4bifVEem8L7GnWj5llQ" source="genmymodel">
+        <details xmi:id="_eui4byfVEem8L7GnWj5llQ" key="uuid" value="_zPYd4AoCEDeft9glrN7A0g"/>
+      </eAnnotations>
+      <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#//String"/>
+    </ownedAttribute>
+  </packagedElement>
+</uml:Model>
