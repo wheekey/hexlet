@@ -14,6 +14,9 @@ public class AICoordinateGetter implements ICoordinateGetter {
 
     Проверить, нельзя ли завершить игру победой.
     Проверить, не может ли враг на следующем ходе завершить игру победой.
+
+
+
     Проверить, можно ли создать противнику безвыходную ситуацию
     Если нельзя, то походить просто на одну из выгодных позиций.
     Если и это невозможно, походить на первую попавшуюся клетку.
@@ -73,39 +76,26 @@ public class AICoordinateGetter implements ICoordinateGetter {
     }
 
 
+
+
     private boolean isExistOpportunityToMakeHopelessSituationForCompetitor(final Field field, final Figure winFigure)
     {
-        int edgePointsCnt = 0;
 
-        if(field.getFigure(new Point(0,0)) == winFigure)
-        {
-            edgePointsCnt++;
-        }
 
-        if(field.getFigure(new Point(0,2)) == winFigure)
-        {
-            edgePointsCnt++;
-        }
 
-        if(field.getFigure(new Point(2,0)) == winFigure)
-        {
-            edgePointsCnt++;
-        }
-
-        if(field.getFigure(new Point(2,2)) == winFigure)
-        {
-            edgePointsCnt++;
-        }
-
-        if(edgePointsCnt > 2)
-        {
-            return true;
-        }
-
-        return false;
+        return isExistOpportunityToMakeHopelessSituationForCompetitorByThreeEdgePoints(final Field field, final Figure winFigure);
     }
 
+    private boolean isExistOpportunityToMakeHopelessSituationForCompetitorByThreeEdgePoints(final Field field, final Figure winFigure) {
 
+    // Идем циклом по периметру и сохраняем значения.
+        // В итоге формируем массив из единиц и ноликов. Если ячейка не заполнена или заполнена фигурой winFigure и она находится на периметре
+        //То это единичка, иначе - нолик.
+
+       //Массив значений равен размерности поля NxN
+       int[]
+
+    }
 
 
     /**
