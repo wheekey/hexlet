@@ -1,4 +1,10 @@
-package module2.lesson1;
+package kymbrik;
+
+import jdk.internal.org.objectweb.asm.ClassWriter;
+import jdk.internal.org.objectweb.asm.MethodVisitor;
+import jdk.internal.org.objectweb.asm.Opcodes;
+
+import java.io.FileOutputStream;
 
 public class ClassGen {
 
