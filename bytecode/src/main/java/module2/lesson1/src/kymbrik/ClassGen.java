@@ -24,7 +24,7 @@ public class ClassGen {
                 null,
                 "java/lang/Object",
                 null);
-        generateDefaultConstructor(cw);
+        //generateDefaultConstructor(cw);
         generateSummMethod(cw);
         cw.visitEnd();
         return cw.toByteArray();
@@ -48,6 +48,12 @@ public class ClassGen {
                 null);   // method attributes
         mv.visitCode();
         // BEGIN (write your solution here)
+
+        mv.visitVarInsn(Opcodes.ILOAD, 1);
+        mv.visitVarInsn(Opcodes.ILOAD, 2);
+        mv.visitInsn(Opcodes.IADD);
+        mv.visitInsn(Opcodes.IRETURN);
+        mv.visitMaxs(2, 3);
 
         // END
         mv.visitEnd();
