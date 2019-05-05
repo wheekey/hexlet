@@ -1,4 +1,11 @@
-package module3.lesson0;
+package kymbrik;
+
+import jdk.internal.org.objectweb.asm.ClassWriter;
+import jdk.internal.org.objectweb.asm.Label;
+import jdk.internal.org.objectweb.asm.MethodVisitor;
+import jdk.internal.org.objectweb.asm.Opcodes;
+
+import java.io.FileOutputStream;
 
 public class ClassGen {
 
@@ -44,7 +51,16 @@ public class ClassGen {
         mv.visitCode();
         final Label elseLabel = new Label();
         // BEGIN (write your solution here)
+        mv.visitVarInsn(Opcodes.ILOAD, 0);
+        mv.visitVarInsn(Opcodes.ILOAD, 1);
+        mv.visitJumpInsn(Opcodes.IF_ICMPGE, elseLabel);
+        mv.visitVarInsn(Opcodes.ILOAD, 0);
+        mv.visitInsn(Opcodes.IRETURN);
+        mv.visitLabel(elseLabel);
+        mv.visitVarInsn(Opcodes.ILOAD, 1);
+        mv.visitInsn(Opcodes.IRETURN);
 
+        mv.visitMaxs(2, 2);
         // END
         mv.visitEnd();
     }
@@ -59,7 +75,26 @@ public class ClassGen {
         final Label elseLabel = new Label();
         final Label elseLabel2 = new Label();
         // BEGIN (write your solution here)
+        mv.visitVarInsn(Opcodes.ILOAD, 0);
+        mv.visitVarInsn(Opcodes.ILOAD, 1);
+        mv.visitJumpInsn(Opcodes.IF_ICMPGE, elseLabel);
+        mv.visitVarInsn(Opcodes.ILOAD, 0);
+        mv.visitVarInsn(Opcodes.ILOAD, 2);
+        mv.visitJumpInsn(Opcodes.IF_ICMPGE, elseLabel);
+        mv.visitVarInsn(Opcodes.ILOAD, 0);
+        mv.visitInsn(Opcodes.IRETURN);
+        mv.visitLabel(elseLabel);
+        mv.visitVarInsn(Opcodes.ILOAD, 1);
+        mv.visitVarInsn(Opcodes.ILOAD, 2);
+        mv.visitJumpInsn(Opcodes.IF_ICMPGE, elseLabel2);
+        mv.visitVarInsn(Opcodes.ILOAD, 1);
+        mv.visitInsn(Opcodes.IRETURN);
+        mv.visitLabel(elseLabel2);
+        mv.visitVarInsn(Opcodes.ILOAD, 2);
 
+        mv.visitInsn(Opcodes.IRETURN);
+
+        mv.visitMaxs(2, 3);
         // END
         mv.visitEnd();
     }
